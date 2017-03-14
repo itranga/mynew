@@ -27,10 +27,12 @@ function callback (err, result) {
 
 function getTranslations(req, res) {
   var fields = [
-    req.params.userId, // The user login is not implemented, so just give it an id of your liking for now
-    req.params.dictionary,
-    req.params.lastChanged
+    1, // The user login is not implemented, so just give it an id of your liking for now
+    "dic",
+    "dic"
   ];
+
+
   if (req.params.lastChanged) {
     db.getTranslationsByDate(fields, function (err, result) {   return err ? res.send(err) : res.json(result); });
   } else {
@@ -46,6 +48,7 @@ function getTranslationsByDate(req, res) {
     req.params.dictionary
   ];
   console.log(fields);
+
   db.getTranslationsById(fields, function (err, result) {   return err ? res.send(err) : res.json(result); });
 }
 
