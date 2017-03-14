@@ -1,6 +1,8 @@
 node-mysql-json-server
 ===========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/itranga/mynew.svg)](https://greenkeeper.io/)
+
 Testing setting up a json-server with Node, Restify and node-mysql.
 
 You can make a dicitonary, so save your translations.
