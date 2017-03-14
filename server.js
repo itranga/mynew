@@ -15,7 +15,9 @@ server.post('/create', createTranslation); // curl -i -X POST -H 'Content-Type: 
 server.put('/update', updateTranslation); // curl -i -X PUT -H 'Content-Type: application/json' -d  "userId=1&dictionary=1&originalTranslationId=0&fromWord=Fisk&fromDescription=&toWord=Zivis&toDescription=" localhost:8080/update
 server.del('/delete', deleteTranslation); // curl -i -X DELETE http://localhost:8080/delete/51374299e669481c48a25c8c
 
-server.listen(5000, function() {
+var port = process.env.PORT || 5000;
+
+server.listen(port, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
