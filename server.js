@@ -50,12 +50,12 @@ function callback (err, result) {
 function getTranslations(req, res) {
 
   // Table created
-  var result =  User.create({
-    firstName: 'John',
-    lastName: 'Hancock'
-  });
+//  var result =  User.create({
+  //  firstName: 'John',
+  //  lastName: 'Hancock'
+  //});
 
-  res.json(result)
+  res.json({test:'ok'})
 
 }
 
